@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getFriends } from '../actions/actions';
+import FriendsForm from './FriendsForm';
 
 const FriendsList = ({ getFriends, friends, error }) => {
     useEffect(() => {
@@ -24,6 +25,7 @@ const FriendsList = ({ getFriends, friends, error }) => {
                     </div>
                 )
             })}
+            <FriendsForm />
         </>
     )
 } 
@@ -35,4 +37,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getFriends})(FriendsList);
+export default connect(mapStateToProps, { getFriends })(FriendsList);
