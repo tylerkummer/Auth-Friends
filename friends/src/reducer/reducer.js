@@ -1,3 +1,5 @@
+import { GET_FRIENDS_FETCHING, UPDATE_FRIENDS_FETCHING, SET_ERROR_FETCHING } from '../actions/actions';
+
 const initialState = {
     friends: [],
     isFetchingFriends: false,
